@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="755.0" style="-fx-background-color: #1568b5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ahmad.xirplb.MainController">
+   <children>
+      <Text fill="WHITE" layoutX="43.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Form Transaksi">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="proses" layoutX="373.0" layoutY="494.0" mnemonicParsing="false" onAction="#prosesTransaksi" prefHeight="29.0" prefWidth="353.0" style="-fx-background-color: #ffffff;" text="Proses" />
+      <Button fx:id="cetak_resi" layoutX="373.0" layoutY="535.0" mnemonicParsing="false" onAction="#prosesCetak" prefHeight="29.0" prefWidth="353.0" style="-fx-background-color: #ffffff;" text="Cetak Resi" />
+      <Button fx:id="list_data_transaksi" layoutX="373.0" layoutY="576.0" mnemonicParsing="false" onAction="#prosesList" prefHeight="29.0" prefWidth="353.0" style="-fx-background-color: #ffffff;" text="List Data Transaksi" />
+    <AnchorPane layoutX="496.0" layoutY="34.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      <TitledPane animated="false" layoutX="35.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="320.0" text="Data Pengirim">
+        <content>
+          <AnchorPane fx:id="data_pengirim" minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="320.0" style="-fx-background-color: #1569b2;">
+               <children>
+                  <Text fill="WHITE" layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama" />
+                  <Text fill="WHITE" layoutX="21.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telepon" />
+                  <Text fill="WHITE" layoutX="21.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
+                  <TextArea fx:id="alamat_pengirim" layoutX="21.0" layoutY="130.0" prefHeight="80.0" prefWidth="267.0" />
+                  <TextField fx:id="nama_pengirim" layoutX="21.0" layoutY="31.0" prefHeight="25.0" prefWidth="267.0" />
+                  <TextField fx:id="no_tlp_pengirim" layoutX="21.0" layoutY="78.0" prefHeight="25.0" prefWidth="267.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="373.0" layoutY="61.0" prefHeight="420.0" prefWidth="353.0" text="Data Pengiriman">
+        <content>
+          <AnchorPane fx:id="data_pengiriman" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1569b2;">
+               <children>
+                  <TextField fx:id="berat_barang" layoutX="31.0" layoutY="132.0" prefHeight="25.0" prefWidth="82.0" />
+                  <TextField fx:id="biaya_perkilo" layoutX="151.0" layoutY="132.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TextField fx:id="jenis_barang" layoutX="31.0" layoutY="84.0" prefHeight="25.0" prefWidth="289.0" />
+                  <TextArea fx:id="keterangan_barang" layoutX="30.0" layoutY="189.0" prefHeight="99.0" prefWidth="293.0" />
+                  <TextArea fx:id="total" layoutX="29.0" layoutY="338.0" prefHeight="29.0" prefWidth="296.0" />
+                  <Text fill="WHITE" layoutX="28.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipe Layanan" />
+                  <Text fill="WHITE" layoutX="30.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Barang" />
+                  <Text fill="WHITE" layoutX="29.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Berat Barang" />
+                  <Text fill="WHITE" layoutX="151.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biaya Perkilo" />
+                  <Text fill="WHITE" layoutX="120.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kg" />
+                  <Text fill="WHITE" layoutX="30.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keterangan Barang" />
+                  <Text fill="WHITE" layoutX="28.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" />
+                  <ComboBox fx:id="tipe_layanan" layoutX="29.0" layoutY="42.0" prefHeight="25.0" prefWidth="289.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="35.0" layoutY="342.0" prefHeight="264.0" prefWidth="320.0" text="Data Penerima">
+        <content>
+          <AnchorPane fx:id="data_penerima" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1569b2;">
+               <children>
+                  <Text fill="WHITE" layoutX="26.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telepon" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
+                  <TextArea fx:id="alamat_penerima" layoutX="25.0" layoutY="158.0" prefHeight="68.0" prefWidth="260.0" />
+                  <TextField fx:id="nama_penerima" layoutX="25.0" layoutY="31.0" prefHeight="25.0" prefWidth="260.0" />
+                  <TextField fx:id="no_tlp_penerima" layoutX="26.0" layoutY="74.0" prefHeight="25.0" prefWidth="261.0" />
+                  <ComboBox fx:id="kota_penerima" layoutX="25.0" layoutY="116.0" prefHeight="25.0" prefWidth="261.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="btn_logout" layoutX="648.0" layoutY="19.0" mnemonicParsing="false" onAction="#prosesLogout" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #ffffff;" text="Logout" />
+   </children>
+</AnchorPane>
